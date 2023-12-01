@@ -84,6 +84,7 @@ function CitiesProvider({ children }) {
     fetchCities();
   }, []);
 
+  //using call back function to protect from infinet loop in City.jsx component
   const getCity = useCallback(
     async function getCity(id) {
       if (Number(id) === currentCity.id) return;
